@@ -11,7 +11,30 @@ yarn add styled-rules
 ## Basic usage
 
 ```js
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import styledBy from 'styled-by'
+import { flexbox } from 'styled-rules'
 
+const propTypes = {
+	...flexbox.propTypes	
+}
+
+const defaultProps = {
+	...flexbox.defaultProps	
+}
+
+const Wrapper = props => (
+	<div {...props}>
+		Styled Rules!
+	</div>
+)
+
+Wrapper.propTypes = propTypes
+Wrapper.defaultProps = defaultProps
+
+export default styled(Wrapper)`${styledBy(flexbox.rules)}`
 ```
 
 ## License
