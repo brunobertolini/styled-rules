@@ -1,22 +1,24 @@
 import babel from 'rollup-plugin-babel'
 import uglify from 'rollup-plugin-uglify'
+import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 
 export default {
-  entry: 'src/index.js',
-  moduleName: 'styledRules',
-  exports: 'named',
-  external: 'prop-types',
-  globals: {
-    'prop-types': 'Propypes'
+  input: 'src/index.js',
+  output: {
+    name: 'styledRules',
+    file: 'build/styled-rules.min.js',
+    format: 'umd',
+    exports: 'named',
+    globals: {
+      'prop-types': 'Propypes'
+    }
   },
-  targets: [{
-    dest: 'build/styled-rules.min.js',
-    format: 'umd'
-  }],
+
   plugins: [
     babel(),
     resolve(),
+    commonjs(),
     uglify()
   ]
 }

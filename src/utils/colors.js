@@ -19,4 +19,4 @@ const get = (colors, color) => {
     : colors[realColor] ? colors[realColor] : realColor
 }
 
-export default get
+module.exports = get
