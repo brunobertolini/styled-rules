@@ -1,35 +1,43 @@
 const options = {
-  flexbox: ({ column, reverse }) => `
+	flexbox: ({ column, reverse }) => `
     display: flex;
-    flex-direction: ${column ? 'column': 'row'}${reverse ? '-reverse' : ''};
+    flex-direction: ${column ? "column" : "row"}${reverse ? "-reverse" : ""};
   `,
 
-  flex: {
-    _: ({ flex }) => `flex: ${flex};`,
-    true: `flex: 1 1 auto;`
-  },
+	flex: {
+		_: ({ flex }) => `flex: ${flex};`,
+		true: `flex: 1 1 auto;`
+	},
 
-  wrap: {
-    _: ({ wrap }) => `flex-wrap: ${wrap};`,
-    true: `flex-wrap: wrap;`
-  },
+	wrap: {
+		_: ({ wrap }) => `flex-wrap: ${wrap};`,
+		true: `flex-wrap: wrap;`
+	},
 
-  justify: ({ justify }) => `
+	justify: ({ justify }) => `
     justify-content: ${justify};
   `,
 
-  align: ({ align }) => `
+	align: ({ align }) => `
     align-items: ${align};
   `,
 
-  self: ({ self }) => `
+	self: ({ self }) => `
     align-self: ${self};
   `,
 
-  center: `
+	noShrink: `
+    flex-shrink: 0;
+  `,
+
+	shrink: ({ shrink }) => `
+    flex-shrink: ${shrink};
+  `,
+
+	center: `
     align-items: center;
     justify-content: center;
   `
-}
+};
 
-export default options
+export default options;

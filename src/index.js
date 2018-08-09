@@ -1,15 +1,9 @@
-import background from './rules/background'
-import flexbox from './rules/flexbox'
-import spacing from './rules/spacing'
-import border from './rules/border'
-import sizes from './rules/sizes'
-import font from './rules/font'
-
-export {
-  background,
-  flexbox,
-  spacing,
-  border,
-  sizes,
-  font
-}
+export background from "./rules/background";
+export border from "./rules/border";
+export flexbox from "./rules/flexbox";
+export font from "./rules/font";
+export positioning from "./rules/positioning";
+export scroll from "./rules/scroll";
+export shadow from "./rules/shadow";
+export sizes from "./rules/sizes";
+export spacing from "./rules/spacing";
