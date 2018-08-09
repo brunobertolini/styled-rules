@@ -1,5 +1,5 @@
 import test from "ava";
-import getColor from "./colors";
+import getColor from "./";
 
 const colors = {
 	bg: "#F4F4F4",
