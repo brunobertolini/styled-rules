@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import get from "./../../utils/colors";
+import get from "./../../colors";
 
 const sizes = ["tiny", "small", "normal", "large", "big", "huge", "massive"];
 const textAligns = ["left", "right", "center", "justify", "initial", "inherit"];

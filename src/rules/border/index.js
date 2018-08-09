@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import get from "./../../utils/colors";
+import get from "./../../colors";
 
 const borderStyles = [
 	"none",
