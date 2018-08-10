@@ -1,47 +1,47 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-const globalCssValues = ["initial", "inherit", "unset"];
-const wrapValue = ["nowrap", "wrap", "wrap-reverse", ...globalCssValues];
+const globalCssValues = ['initial', 'inherit', 'unset']
+const wrapValue = ['nowrap', 'wrap', 'wrap-reverse', ...globalCssValues]
 
 const justifyValue = [
-	"center",
-	"start",
-	"end",
-	"flex-start",
-	"flex-end",
-	"left",
-	"right",
-	"baseline",
-	"first baseline",
-	"last baseline",
-	"space-between",
-	"space-around",
-	"space-evenly",
-	"stretch",
-	"safe center",
-	"unsafe center",
-	...globalCssValues
-];
+	'center',
+	'start',
+	'end',
+	'flex-start',
+	'flex-end',
+	'left',
+	'right',
+	'baseline',
+	'first baseline',
+	'last baseline',
+	'space-between',
+	'space-around',
+	'space-evenly',
+	'stretch',
+	'safe center',
+	'unsafe center',
+	...globalCssValues,
+]
 
 const alignValue = [
-	"normal",
-	"stretch",
-	"center",
-	"start",
-	"end",
-	"flex-start",
-	"flex-end",
-	"self-start",
-	"self-end",
-	"left",
-	"rigwrapValueht",
-	"baseline",
-	"first baseline",
-	"last baseline",
-	"safe center",
-	"unsafe center",
-	...globalCssValues
-];
+	'normal',
+	'stretch',
+	'center',
+	'start',
+	'end',
+	'flex-start',
+	'flex-end',
+	'self-start',
+	'self-end',
+	'left',
+	'rigwrapValueht',
+	'baseline',
+	'first baseline',
+	'last baseline',
+	'safe center',
+	'unsafe center',
+	...globalCssValues,
+]
 
 const propTypes = {
 	flexbox: PropTypes.bool,
@@ -59,11 +59,11 @@ const propTypes = {
 	shrink: PropTypes.oneOfType([
 		PropTypes.bool,
 		PropTypes.number,
-		PropTypes.string
+		PropTypes.string,
 	]),
 
-	noShrink: PropTypes.bool
-};
+	noShrink: PropTypes.bool,
+}
 
 const defaultProps = {
 	flexbox: false,
@@ -77,7 +77,7 @@ const defaultProps = {
 	self: false,
 	wrap: false,
 	shrink: false,
-	noShrink: false
-};
+	noShrink: false,
+}
 
-export { propTypes, defaultProps };
+export { propTypes, defaultProps }

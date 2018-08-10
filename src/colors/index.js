@@ -1,26 +1,26 @@
 const path = (props, obj) =>
-	props.reduce((memo, current) => (memo[current] ? memo[current] : memo), obj);
+	props.reduce((memo, current) => (memo[current] ? memo[current] : memo), obj)
 
-const split = (splitter, string) => string.split(splitter);
+const split = (splitter, string) => string.split(splitter)
 
 const choose = (color, inverted) =>
-	color.indexOf(".") === -1
+	color.indexOf('.') === -1
 		? inverted
 			? `${color}.contrast`
 			: `${color}.base`
-		: color;
+		: color
 
 const get = (colors, color) => {
-	const inverted = color.indexOf("!") > -1;
-	const realColor = color.replace("!", "");
+	const inverted = color.indexOf('!') > -1
+	const realColor = color.replace('!', '')
 
-	const result = path(split(".", choose(realColor, inverted)), colors);
+	const result = path(split('.', choose(realColor, inverted)), colors)
 
-	return typeof result === "string"
+	return typeof result === 'string'
 		? result
 		: colors[realColor]
 			? colors[realColor]
-			: realColor;
-};
+			: realColor
+}
 
-module.exports = get;
+module.exports = get

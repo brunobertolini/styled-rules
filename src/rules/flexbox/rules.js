@@ -1,17 +1,17 @@
 const options = {
 	flexbox: ({ column, reverse }) => `
     display: flex;
-    flex-direction: ${column ? "column" : "row"}${reverse ? "-reverse" : ""};
+    flex-direction: ${column ? 'column' : 'row'}${reverse ? '-reverse' : ''};
   `,
 
 	flex: {
 		_: ({ flex }) => `flex: ${flex};`,
-		true: `flex: 1 1 auto;`
+		true: `flex: 1 1 auto;`,
 	},
 
 	wrap: {
 		_: ({ wrap }) => `flex-wrap: ${wrap};`,
-		true: `flex-wrap: wrap;`
+		true: `flex-wrap: wrap;`,
 	},
 
 	justify: ({ justify }) => `
@@ -41,7 +41,7 @@ const options = {
 
 	blocked: `
     align-self: stretch;
-  `
-};
+  `,
+}
 
-export default options;
+export default options

@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 const propTypes = {
 	full: PropTypes.bool,
@@ -13,8 +13,8 @@ const propTypes = {
 
 	width: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 
-	maxWidth: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
-};
+	maxWidth: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+}
 
 const defaultProps = {
 	full: false,
@@ -23,8 +23,8 @@ const defaultProps = {
 	maxHeight: false,
 	minWidth: false,
 	width: false,
-	maxWidth: false
-};
+	maxWidth: false,
+}
 
 const rules = {
 	full: `height: 100vh;`,
@@ -33,7 +33,7 @@ const rules = {
 	maxHeight: ({ maxHeight }) => `max-height: ${maxHeight};`,
 	minWidth: ({ minWidth }) => `min-width: ${minWidth};`,
 	width: ({ width }) => `width: ${width};`,
-	maxWidth: ({ maxWidth }) => `max-width: ${maxWidth};`
-};
+	maxWidth: ({ maxWidth }) => `max-width: ${maxWidth};`,
+}
 
-export default { propTypes, defaultProps, rules };
+export default { propTypes, defaultProps, rules }

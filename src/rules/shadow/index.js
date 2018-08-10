@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import get from "./../../colors";
+import PropTypes from 'prop-types'
+import get from './../../colors'
 
 const propTypes = {
 	shadow: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
@@ -16,19 +16,19 @@ const propTypes = {
 
 	shadowColor: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 
-	transparency: PropTypes.number
-};
+	transparency: PropTypes.number,
+}
 
 const defaultProps = {
 	shadow: false,
 	inset: false,
-	hoffset: "0px",
-	voffset: "0px",
-	blur: "16px",
-	spread: "0",
+	hoffset: '0px',
+	voffset: '0px',
+	blur: '16px',
+	spread: '0',
 	transparency: 0.025,
-	shadowColor: false
-};
+	shadowColor: false,
+}
 
 const rules = {
 	shadow: {
@@ -42,22 +42,22 @@ const rules = {
 			spread,
 			shadowColor,
 			transparency,
-			theme
+			theme,
 		}) => `
       box-shadow:
-        ${hoffset ? hoffset : ""}
-        ${voffset ? voffset : ""}
-        ${blur ? blur : ""}
-        ${spread ? spread : ""}
+        ${hoffset ? hoffset : ''}
+        ${voffset ? voffset : ''}
+        ${blur ? blur : ''}
+        ${spread ? spread : ''}
         ${
 					shadowColor
 						? get(theme.colors, shadowColor)
 						: `rgba(0,0,0,${transparency})`
 				}
-        ${inset ? "inset" : ""}
+        ${inset ? 'inset' : ''}
       ;
-    `
-	}
-};
+    `,
+	},
+}
 
-export default { propTypes, defaultProps, rules };
+export default { propTypes, defaultProps, rules }

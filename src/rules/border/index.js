@@ -1,20 +1,20 @@
-import PropTypes from "prop-types";
-import get from "./../../colors";
+import PropTypes from 'prop-types'
+import get from './../../colors'
 
 const borderStyles = [
-	"none",
-	"hidden",
-	"dotted",
-	"dashed",
-	"solid",
-	"double",
-	"groove",
-	"ridge",
-	"inset",
-	"outset",
-	"initial",
-	"inherit"
-];
+	'none',
+	'hidden',
+	'dotted',
+	'dashed',
+	'solid',
+	'double',
+	'groove',
+	'ridge',
+	'inset',
+	'outset',
+	'initial',
+	'inherit',
+]
 
 const propTypes = {
 	border: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
@@ -25,16 +25,16 @@ const propTypes = {
 
 	borderColor: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 
-	borderRadius: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
-};
+	borderRadius: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+}
 
 const defaultProps = {
 	border: false,
-	borderWidth: "1px",
-	borderStyle: "solid",
-	borderColor: "border",
-	borderRadius: false
-};
+	borderWidth: '1px',
+	borderStyle: 'solid',
+	borderColor: 'border',
+	borderRadius: false,
+}
 
 const rules = {
 	border: {
@@ -104,7 +104,7 @@ const rules = {
       border-width: ${borderWidth} 0 ${borderWidth} ${borderWidth};
       border-style: ${borderStyle};
       border-color: ${get(theme.colors, borderColor)};
-    `
+    `,
 	},
 
 	borderRadius: {
@@ -133,8 +133,8 @@ const rules = {
 		bottomLeft: ({ theme }) =>
 			`border-radius: 0 0 0 0 ${theme.dimensions.borderRadius};`,
 		bottomRight: ({ theme }) =>
-			`border-radius: 0 0 ${theme.dimensions.borderRadius} ;0`
-	}
-};
+			`border-radius: 0 0 ${theme.dimensions.borderRadius} ;0`,
+	},
+}
 
-export default { propTypes, defaultProps, rules };
+export default { propTypes, defaultProps, rules }

@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-const positions = ["absolute", "initial", "relative", "static"];
+const positions = ['absolute', 'initial', 'relative', 'static']
 
 const propTypes = {
 	position: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(positions)]),
@@ -8,42 +8,42 @@ const propTypes = {
 	top: PropTypes.oneOfType([
 		PropTypes.bool,
 		PropTypes.number,
-		PropTypes.string
+		PropTypes.string,
 	]),
 
 	bottom: PropTypes.oneOfType([
 		PropTypes.bool,
 		PropTypes.number,
-		PropTypes.string
+		PropTypes.string,
 	]),
 
 	left: PropTypes.oneOfType([
 		PropTypes.bool,
 		PropTypes.number,
-		PropTypes.string
+		PropTypes.string,
 	]),
 
 	right: PropTypes.oneOfType([
 		PropTypes.bool,
 		PropTypes.number,
-		PropTypes.string
-	])
-};
+		PropTypes.string,
+	]),
+}
 
 const defaultProps = {
 	position: false,
 	top: false,
 	bottom: false,
 	left: false,
-	right: false
-};
+	right: false,
+}
 
 const rules = {
 	position: ({ position }) => `position: ${position};`,
 	top: ({ top }) => `top: ${top};`,
 	bottom: ({ bottom }) => `bottom: ${bottom};`,
 	left: ({ left }) => `left: ${left};`,
-	right: ({ right }) => `right: ${right};`
-};
+	right: ({ right }) => `right: ${right};`,
+}
 
-export default { propTypes, defaultProps, rules };
+export default { propTypes, defaultProps, rules }

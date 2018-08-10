@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
-import get from "./../../colors";
+import PropTypes from 'prop-types'
+import get from './../../colors'
 
-const sizes = ["tiny", "small", "normal", "large", "big", "huge", "massive"];
-const textAligns = ["left", "right", "center", "justify", "initial", "inherit"];
+const sizes = ['tiny', 'small', 'normal', 'large', 'big', 'huge', 'massive']
+const textAligns = ['left', 'right', 'center', 'justify', 'initial', 'inherit']
 const fontWeights = [
 	100,
 	200,
@@ -13,14 +13,14 @@ const fontWeights = [
 	700,
 	800,
 	900,
-	"normal",
-	"bold",
-	"bolder",
-	"lighter",
-	"number",
-	"initial",
-	"inherit"
-];
+	'normal',
+	'bold',
+	'bolder',
+	'lighter',
+	'number',
+	'initial',
+	'inherit',
+]
 
 const propTypes = {
 	family: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
@@ -38,20 +38,20 @@ const propTypes = {
 	uppercase: PropTypes.bool,
 	truncate: PropTypes.bool,
 
-	color: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
-};
+	color: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+}
 
 const defaultProps = {
 	family: false,
-	size: "normal",
+	size: 'normal',
 	textAlign: false,
 	lineHeight: false,
 	weight: 400,
 	light: false,
 	strong: false,
 	uppercase: false,
-	truncate: false
-};
+	truncate: false,
+}
 
 const rules = {
 	family: ({ family }) => `
@@ -68,7 +68,7 @@ const rules = {
   `,
 
 	weight: ({ light, strong, weight }) => `
-    font-weight: ${light ? "300" : strong ? "700" : weight};
+    font-weight: ${light ? '300' : strong ? '700' : weight};
   `,
 
 	textAlign: ({ textAlign }) => `text-align: ${textAlign};`,
@@ -83,7 +83,7 @@ const rules = {
     text-overflow: ellipsis;
   `,
 
-	color: ({ color, theme }) => `color: ${get(theme.colors, color)};`
-};
+	color: ({ color, theme }) => `color: ${get(theme.colors, color)};`,
+}
 
-export default { propTypes, defaultProps, rules };
+export default { propTypes, defaultProps, rules }

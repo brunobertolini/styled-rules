@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-const types = [PropTypes.bool, PropTypes.string, PropTypes.number];
+const types = [PropTypes.bool, PropTypes.string, PropTypes.number]
 
 const propTypes = prop => ({
 	[prop]: PropTypes.oneOfType(types),
@@ -9,8 +9,8 @@ const propTypes = prop => ({
 	[`${prop}Left`]: PropTypes.oneOfType(types),
 	[`${prop}Right`]: PropTypes.oneOfType(types),
 	[`${prop}Horizontal`]: PropTypes.oneOfType(types),
-	[`${prop}Vertical`]: PropTypes.oneOfType(types)
-});
+	[`${prop}Vertical`]: PropTypes.oneOfType(types),
+})
 
 const defaultProps = prop => ({
 	[prop]: false,
@@ -19,14 +19,14 @@ const defaultProps = prop => ({
 	[`${prop}Left`]: false,
 	[`${prop}Right`]: false,
 	[`${prop}Horizontal`]: false,
-	[`${prop}Vertical`]: false
-});
+	[`${prop}Vertical`]: false,
+})
 
 const choose = {
 	boolean: (props, prop) => props.theme.dimensions[prop],
 	string: (props, prop, value) => value,
-	number: (props, prop, value) => `${props.theme.dimensions.em(value)}px`
-};
+	number: (props, prop, value) => `${props.theme.dimensions.em(value)}px`,
+}
 
 const rules = prop => ({
 	[prop]: {
@@ -53,7 +53,7 @@ const rules = prop => ({
 		noRight: props =>
 			`${prop}: ${props.theme.dimensions[prop]} 0 ${
 				props.theme.dimensions[prop]
-			} ${props.theme.dimensions[prop]};`
+			} ${props.theme.dimensions[prop]};`,
 	},
 
 	[`${prop}Top`]: props =>
@@ -91,11 +91,11 @@ const rules = prop => ({
 			props,
 			prop,
 			props[`${prop}Horizontal`]
-		)};`
-});
+		)};`,
+})
 
 export default {
-	propTypes: { ...propTypes("padding"), ...propTypes("margin") },
-	defaultProps: { ...defaultProps("padding"), ...defaultProps("margin") },
-	rules: { ...rules("padding"), ...rules("margin") }
-};
+	propTypes: { ...propTypes('padding'), ...propTypes('margin') },
+	defaultProps: { ...defaultProps('padding'), ...defaultProps('margin') },
+	rules: { ...rules('padding'), ...rules('margin') },
+}

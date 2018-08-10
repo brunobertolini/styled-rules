@@ -1,12 +1,15 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 const propTypes = {
-	scroll: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["horizontal"])])
-};
+	scroll: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.oneOf(['horizontal']),
+	]),
+}
 
 const defaultProps = {
-	scroll: false
-};
+	scroll: false,
+}
 
 const rules = {
 	scroll: {
@@ -19,8 +22,8 @@ const rules = {
       overflow-x: auto;
       overflow-y: hidden;
       flex-shrink: none;
-    `
-	}
-};
+    `,
+	},
+}
 
-export default { propTypes, defaultProps, rules };
+export default { propTypes, defaultProps, rules }
