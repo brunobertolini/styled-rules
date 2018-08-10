@@ -1,6 +1,6 @@
 {
   "name": "styled-rules",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Presets style rules, theme based, highly customizable style props",
   "license": "MIT",
   "repository": "brunobertolini/styled-rules",
