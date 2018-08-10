@@ -26,17 +26,21 @@ const options = {
     align-self: ${self};
   `,
 
-	noShrink: `
-    flex-shrink: 0;
-  `,
-
 	shrink: ({ shrink }) => `
     flex-shrink: ${shrink};
+  `,
+
+	noShrink: `
+    flex-shrink: 0;
   `,
 
 	center: `
     align-items: center;
     justify-content: center;
+  `,
+
+	blocked: `
+    align-self: stretch;
   `
 };
 

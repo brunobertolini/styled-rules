@@ -48,15 +48,12 @@ const propTypes = {
 	column: PropTypes.bool,
 	reverse: PropTypes.bool,
 	center: PropTypes.bool,
+	blocked: PropTypes.bool,
 
 	flex: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-
 	justify: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(justifyValue)]),
-
 	align: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(alignValue)]),
-
 	self: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(alignValue)]),
-
 	wrap: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(wrapValue)]),
 
 	shrink: PropTypes.oneOfType([
@@ -73,6 +70,7 @@ const defaultProps = {
 	column: false,
 	reverse: false,
 	center: false,
+	blocked: false,
 	flex: false,
 	justify: false,
 	align: false,
